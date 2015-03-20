@@ -30,7 +30,8 @@ import java.util.regex.Pattern;
  *
  * @author Bhavik
  */
-public class NewGoErie {
+public class NewGoErie 
+{
 
     ArrayList Address = new ArrayList();
     ArrayList<Date> datePicker = new ArrayList();
@@ -197,7 +198,6 @@ public class NewGoErie {
 
             while (rs.next()) 
             {
-//                System.out.println(rs.getString("Adress"));
                 s_address.add(rs.getString("Adress"));
                 s_Date.add(rs.getTimestamp("DateOfCrime"));
             }
@@ -233,101 +233,12 @@ public class NewGoErie {
                 
                 
                 }
-//                break;
-//                if (add.equalsIgnoreCase(s_address.get(i).toString()) && lastDate2.equals(s_Date.get(i))) 
-//                {
-//                    if (i == 0) 
-//                    {
-//
-//                        System.out.println("You don't have any update right now");
-//                        s = false;
-//                        break;
-//                    } 
-//                    else 
-//                    {
-//                        
-//                        System.out.println("this is index of update data <<<<<<<<<<<<<>>>>>>>>>>" + index);
-////                        inserDataAfterCheck();
-//                        index = i-1;
-//                        
-//                        s = false;
-//                        break;
-//                    }
-//                }
-//                else
-//                {
-//                    index = i;
-//                    System.out.println("index full index" +index);
-//                }
             }
         }
         catch (Exception e) 
         {
             e.printStackTrace();
         }
-//        try 
-//        {
-//            int count = 0;
-//            Class.forName(driver).newInstance();
-//            Connection conn = DriverManager.getConnection(url1 + dbName1, userName, password);
-//            String insertTableSQL = "INSERT INTO raw_data"
-//                    + "(DateOfCrime,Adress,Location,Situation,Offense,LangiAndLatitude,status1) VALUES"
-//                    + "(?,?,?,?,?,?,'NEW')";
-//            for (int i = 0; i < datePicker.size(); i++) 
-//            {
-////                if(Location1.equals((String) Location.get(i)) && Situation1.equals((String) Situation.get(i)) && Adress1.equals((String) Address.get(i))
-////                        && Offense1.equals(Offense.get(i))) 
-//                if(Location1.equals((String) Location.get(i)) && 
-//                        Adress1.equalsIgnoreCase((String) Address.get(i)) && 
-//                        Situation1.equals((String) Situation.get(i)) && 
-//                        lastDate1.equals(datePicker.get(i)) &&
-//                        Offense1.equals(Offense.get(i))) 
-//                {
-//                    System.out.println("latest : " + Address.get(i));
-//                    System.out.println("latest : " + Location.get(i));
-//                    System.out.println("latest : " + Situation.get(i));
-//                    System.out.println("latest : " + datePicker.get(i));
-//                    System.out.println("latest : " + Offense.get(i));
-//                   
-//                    System.out.println("this is index of new data >>>>>>>>>>>>>>" + i);
-//                    
-//                }
-//                else
-//                {
-//                    
-//                    count++;
-//                    System.out.println("count, it descrie how many new update we have got it right now...  " +count );
-//                }
-//            }
-//        if(count  > 0)
-//        {
-//             String updateSQL = "UPDATE raw_data SET status1='OLD' where status1 = 'NEW'";
-//             PreparedStatement preparedStatement1 = conn.prepareStatement(updateSQL);
-//             preparedStatement1.executeUpdate();
-//            
-//             for(int i = 0 ; i < count ;i++)
-//            {
-//                PreparedStatement preparedStatement = conn.prepareStatement(insertTableSQL);
-//                preparedStatement.setTimestamp(1, (java.sql.Timestamp) datePicker.get(i));
-//                preparedStatement.setString(2, (String) Address1.get(i));
-//                preparedStatement.setString(3, (String) Location.get(i));
-//                preparedStatement.setString(4, (String) Situation.get(i));
-//                preparedStatement.setString(5, (String) Offense.get(i));
-//                preparedStatement.setString(6, (String) mapit.get(i));
-//                
-//                preparedStatement.executeUpdate();
-//            }
-//            conn.close();
-//        }
-//       }
-//        catch(Exception e)
-//        {
-//        
-//        }
-//                
-//   
-//   
-
     }
     
     public void inserDataAfterCheck()
